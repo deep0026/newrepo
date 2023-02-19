@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>register</title>
+<span style="cursor:pointer" Id="none" bgcolor="red" ></span>
+<span align="right" Id="nonee"></span>
+<script>
+function getTime(){
+var time=new Date();
+var hours=time.getHours();
+var mins=time.getMinutes();
+var sec=time.getSeconds();
+var date=time.getDate();
+var month=time.getMonth();
+var year=time.getFullYear();
+month=+1
+
+document.getElementById("none").innerHTML= "Time="+" "+hours+":"+mins+":"+sec
+setInterval("getTime()",1000);
+
+document.getElementById("nonee").innerHTML= "date="+" "+date+"/"+month+"/"+year;
+
+}
+</script>
+<script>
+function con(){
+var c=document.getElementById("ttd");
+console.log(c);
+}
+function age(){
+window.confirm("Succesfully registered");
+}
+
+function time(){
+window.alert("exam will be closed in 1 min");
+}
+
+
+function agee(){
+window.alert("Exam closed Thank you");
+window.close();
+}
+function ageeeee(){
+window.alert("Do you want to close window");
+window.close();
+}
+
+
+function ageee(){
+window.open("https://www.google.com/");
+}
+function ageeee(){
+window.open("https://www.youtube.com/");
+}
+function printpage(){
+window.print();
+}
+function printpagee(){
+console.warn("program success");
+console.error("error");
+console.table([10,20,30]);
+console.table({rollno:26,name:"jayadeep",address:"ATP"});
+}
+
+</script>
+<script>
+var f=document.getElementById("tik")
+f.addEventListener('Keyup',change)
+function change(con){
+console.log(con)
+}
+</script>
+
+
+</head>
+<style>
+body{
+background-image:url(src="E:\Mphasis\mph\IMG-20160719-WA0001\jpg");
+}
+#none:hover{
+cursor:"wait";
+background-color:green;
+width:50%;
+
+text-align:"center";
+}
+#nonee:hover{
+text-color:"red"
+}
+.jack:hover{
+background-color:green;
+width:8%;
+text-align:"center";
+}
+</style>
+
+<body id="ttd">
+
+<h1 align="center">welcome to <span style="color:green" class="jack">R</span><span style="color:red" class="jack">R</span><span style="color:blue" class="jack">B</span> portal</h1>
+<font size=8 color="red"><marquee id="jj" height=8% text  direction="right" bgcolor="black" scrollamount=7>RRB New Notification 10000 posts</marquee></font>
+<h5 style = "cursor:pointer">please fill following details</h5>
+<form action="register.html" target=_black>
+<b>username:<font color="red">*</font></b>
+<input id="tik" type="text"  name=username placeholder="username" required/></br></br>
+<b>password:<font color="red">*</font></b>
+<input type="password" name=pwd placeholder="password"required/></br></br>
+<b>email:<font color="red">*</font></b>
+<input type="email" class="tik" name=email placeholder="Email"required/></br></br>
+<b>phone number:<font color="red">*</font></b>
+<input type="number" class="tik" name=number placeholder="phone"required/></br></br>
+<b>gender:<font color="red">*</font></b>
+<input type="radio" name="gender"/>male
+<input type="radio" name="gender"/>female</br></br>
+<b>DOB:<font color="red">*</font></b>
+<input type="date" class="tik" name="date" placeholder="dd/mm/yy"required/></br></br>
+<textarea rows=15 cols=20 id=review></textarea></br></br>
+<input type="button" id="details" value="print data"/>
+<script>
+var rev=document.getElementById("review")
+var user=document.getElementById("tik")
+var button=document.getElementById("details")
+var pass=user
+button.onclick=function(){
+user.select();
+document.execCommand("copy")
+const corn=document.execCommand("paste")
+document.write(corn)
+}
+</script>
+
+
+
+
+<b>known languages:<font color="red">*</font></b>
+<input type="checkbox" name=checkbox/>telugu
+<input type="checkbox" name=checkbox/>hindi 
+<input type="checkbox" name=checkbox/>english</br></br>
+<b>upload photo:<font color="red">*</font></b></br></br>
+<input type="file" name="file" required/></br></br>
+<b>address:<font color="red">*</font></b></br>
+<textarea rows=5 cols=100 id="cop"></textarea></br>
+<input type="button" value="copy address" id=paste></br>
+<script>
+var cop=document.getElementById("cop")
+var paste=document.getElementById("paste")
+paste.onclick=function(){
+cop.select();
+document.execCommand("copy")
+}
+</script>
+<input type="submit" value="register"/>
+<input type="button" value="close"onclick="ageeeee();"/> 
+<input type="button" value="Google" onclick="ageee();"/> 
+<input type="button" value="run" onclick="printpagee();"/>
+<input type="button" value="print" onclick="window.print();"/>
+<input type="button" value="Stop"onclick="stop();"/>
+<input type="button" value="console" onclick="con();"/> 
+</form>
+</body>
+</html> 
